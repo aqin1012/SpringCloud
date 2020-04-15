@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespace 唯一标识，与mapper进行绑定 -->
+<mapper namespace="com.jt.demo.mapper.UserMapper">
+	
+	<!-- mybatis是一个半自动化的ORM映射框架，可以自动的实现结果集映射
+	resultType不用写包路径是因为 yml文件中设置了：
+	type-aliases-package: com.jt.demo.pojo-->
+	<select id="findAll" resultType="User">
+		select * from user
+	</select>
+</mapper>

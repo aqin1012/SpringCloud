@@ -1,0 +1,48 @@
+#指定默认环境配置
+spring:  profiles:    active: dev    #活跃的配置
+
+---
+#为配置文件起名
+spring:  profiles: dev
+
+# 1.key-value格式   2.key: value(: 注意空格)   3.注意层级缩进
+server:  port: 8090
+  servlet:    context-path: /   #编辑发布路径
+
+#1.为属性赋值  
+jdbc:
+  url:  mysqlUrl
+  port: 3306
+  
+#2.批量为属性赋值
+jdbc2:
+  url: mysql的URl地址信息 最好不要用中文
+  port: 3306
+  
+# 使用---实现配置文件的分割
+---  
+#为配置文件起名
+spring:
+  profiles: prod
+  
+# 1.key-value格式   2.key: value(: 注意空格)   3.注意层级缩进
+server:
+  port: 8080
+  servlet:
+    context-path: /jt   #编辑发布路径
+
+#1.为属性赋值  
+jdbc:
+  url:  mysqlUrl!!!!!
+  port: 3306
+  
+#2.批量为属性赋值
+jdbc2:
+  url: mysql的URl地址信息 最好不要用中文!!!!!!
+  port: 3306
+
+
+
+
+
+
